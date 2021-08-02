@@ -346,12 +346,12 @@
 #
 # print(list(make_word()))
 
-def decor(func):
-    def wrap():
-        print("============")
-        func()
-        print("============")
-    return wrap
+# def decor(func):
+#     def wrap():
+#         print("============")
+#         func()
+#         print("============")
+#     return wrap
 
 # def print_text():
 #     print("Hello world!")
@@ -374,22 +374,159 @@ def decor(func):
 #
 # print_text();
 
-def factorial(x):
-    if x == 1:
-        return 1
-    else:
-        return x * factorial(x-1)
-print(factorial(5))
+# def factorial(x):
+#     if x == 1:
+#         return 1
+#     else:
+#         return x * factorial(x-1)
+# print(factorial(5))
+#
+# def is_even(x):
+#     if x == 0:
+#         return True
+#     else:
+#         return is_odd(x-1)
+#
+# def is_odd(x):
+#     return not is_even(x)
+#
+#
+# print(is_odd(17))
+# print(is_even(23))
+#
+#
+# def fib(x):
+#   if x == 0 or x == 1:
+#     return 1
+#   else:
+#     return fib(x-1) + fib(x-2)
+# print(fib(4))
+#
+# num_set = {1, 2, 3, 4, 5}
+# word_set = set(["spam", "eggs", "sausage"])
+#
+# print(3 in num_set)
+# print("spam" not in word_set)
+#
+# first = {1, 2, 3, 4, 5, 6}
+# second = {4, 5, 6, 7, 8, 9}
+#
+# print(first | second)
+# print(first & second)
+# print(first - second)
+# print(second - first)
+# print(first ^ second)
+#
+# from itertools import accumulate, takewhile
+#
+# nums = list(accumulate(range(8)))
+# print(nums)
+# print(list(takewhile(lambda x: x<= 6, nums)))
+#
+#
+# from itertools import product
+# a={1, 2}
+# print(len(list(product(range(3), a))))
+# nums = {1, 2, 3, 4, 5, 6}
+# nums = {0, 1, 2, 3} & nums
+# nums = filter(lambda x: x > 1, nums)
+# print(len(list(nums)))
+#
+#
+# def power(x, y):
+#     if y == 0:
+#         return 1
+#     else:
+#         return x * power(x, y - 1)
+#
+#
+# print(power(2, 3))
 
-def is_even(x):
-    if x == 0:
-        return True
-    else:
-        return is_odd(x-1)
+# x, y, n = 0, 1, int(input(""))
+# for i in range(n):
+#     print(x)
+#     x, y = y, x+y
 
-def is_odd(x):
-    return not is_even(x)
+# class Juice:
+#     def __init__(self, name, capacity):
+#         self.name = name
+#         self.capacity = capacity
+#     def __str__(self):
+#         return (self.name + " (" + str(self.capacity) + "L)")
+#     def __add__(self, other):
+#         self.capacity = self.capacity + other.capacity
+#         self.name = self.name + "&" + other.name
+#         return (self.name + " (" + str(self.capacity) + "L)")
+# x = Juice("Orange", 1.5)
+# y = Juice("Apple", 2.0)
+# result = x + y
+# print(result)
+
+# import re
+#
+# str = "My name is David. Hi David."
+# pattern = r"David"
+# newstr = re.sub(pattern, "Amy", str)
+# print(newstr)
+
+# import re
+#
+# pattern = r"gr.y"
+#
+# if re.match(pattern, "grey"):
+#     print("Match 1")
+#
+# if re.match(pattern, "gray"):
+#     print("Match 2")
+#
+# if re.match(pattern, "blue"):
+#     print("Match 3")
+
+# import re
+#
+# pattern = r"[aeiou]"
+#
+# if re.search(pattern, "grey"):
+#     print("Match 1")
+#
+# if re.search(pattern, "qwertyuiop"):
+#     print("Match 2")
+#
+# if re.search(pattern, "rhythm myths"):
+#     print("Match 3")
+#
+# import re
+# n = input()
+# if re.match(r"^[189]",n) and len(n) == 8:
+#     print("Valid")
+# else:
+#     print("Invalid")
 
 
-print(is_odd(17))
-print(is_even(23))
+# import this
+# a, b, c, d, *e, f, g = range(20)
+# print(len(e))
+#
+# for i in range(10):
+#    if i > 5:
+#       print(i)
+#       break
+# else:
+#    print("7")
+
+for i in range(10):
+  try:
+    if 10 / i == 2.0:
+      break
+  except ZeroDivisionError:
+    print(1)
+  else:
+    print(2)
+
+def concatenate(*args):
+    v = []
+    for i in args:
+        x = v.append(i)
+    y = "-".join(v)
+    return y
+print(concatenate("I", "love", "Python", "!"))
