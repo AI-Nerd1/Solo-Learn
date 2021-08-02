@@ -230,53 +230,166 @@
 #     print(len(file.readlines()))
 # file.close()
 
-ages = {
-    "Dave": 24,
-    "Mary": 30,
-    "John": 58,
-}
-print(ages["Dave"], ages["Mary"], ages["John"])
+# ages = {
+#     "Dave": 24,
+#     "Mary": 30,
+#     "John": 58,
+# }
+# print(ages["Dave"], ages["Mary"], ages["John"])
+#
+# primary = {
+#     "red": [255, 0, 0],
+#     "green": [0, 255, 0],
+#     "blue": [0, 0, 255],
+# }
+# print(primary["red"])
+#
+# primes = {1: 2, 2: 3, 4: 7, 7:17}
+# print(primes[primes[4]])
+#
+# fib = {1: 1, 2: 1, 3: 2, 4: 3}
+# print(fib.get(4, 0)  + fib.get(7, 5))
+#
+# #           Tuples
+# words = ("spam", "eggs", "sausages",)
+# print(words[0])
+#
+# #  List slices
+# square = [0, 1, 4, 9, 12, 14, 25, 64, 81]
+# print(square[2:6])
+# print(square[:5])
+# print(square[3:])
+#
+# list = ["a", "b", "c", "d"]
+# a = list[0:2]
+# print(a)
+#
+# sqs = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+# print(sqs[1::4])
+#
+# squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+# print(squares[1:-1])
+# print(squares[::-1])
+#
+# # list comprehension
+# cubes = [i**3 for i in range(10)]
+# print(cubes)
+#
+# evens=[i**2 for i in range(10) if i**2 % 2 == 0]
+# print(evens)
+#
+# a = [i for i in range(20) if i % 3 == 0]
+# print(a)
+#
+# print("{0}{1}{0}".format("abra", "cad"))
+#
+#
+# filename = input("Enter a filename: ")
+#
+# with open(filename) as f:
+#    text = f.read()
+#
+# print(text)
+#
+# nums = (55, 44, 33, 22)
+# print(max(min(nums[:2]), abs(-42)))
+#
+# text = input().split()
+# length = [len(x) for x in text]
+# maximum = max(length)
+# text_index = length.index(maximum)
+# print(text[text_index])
 
-primary = {
-    "red": [255, 0, 0],
-    "green": [0, 255, 0],
-    "blue": [0, 0, 255],
-}
-print(primary["red"])
+# def test(func, arg):
+#     return func(func(arg))
+# def mult(x):
+#     return x * x
+# print(test(mult, 2))
+# def polynomial(x):
+#     return x**2 + 5*x + 4
+# print(polynomial(-4))
+# print((lambda x: x**2 + 5*x + 4)(-4))
+#
+# double = lambda x: x**2
+# print(double(7))
 
-primes = {1: 2, 2: 3, 4: 7, 7:17}
-print(primes[primes[4]])
+# def add_five(x):
+#     return x + 5
+#
+#
+# nums = [11, 22, 33, 44, 55]
+# result = list(map(add_five, nums))
+# print(result)
+#
+# nums = [11, 22, 33, 44, 55]
+# result = list(map(lambda x: x+5, nums))
+# print(result)
+#
+# nums = [11, 22, 33, 44, 55]
+# res = list(filter(lambda x: x%2 ==0, nums))
+# print(res)
 
-fib = {1: 1, 2: 1, 3: 2, 4: 3}
-print(fib.get(4, 0)  + fib.get(7, 5))
+# def countdown():
+#     i=5
+#     while i > 0:
+#         yield i
+#         i -= 1
+#
+# for i in countdown():
+#     print(i)
+#
+# def make_word():
+#   word = ""
+#   for ch in "spam":
+#     word +=ch
+#     yield word
+#
+# print(list(make_word()))
 
-#           Tuples
-words = ("spam", "eggs", "sausages",)
-print(words[0])
+def decor(func):
+    def wrap():
+        print("============")
+        func()
+        print("============")
+    return wrap
 
-#  List slices
-square = [0, 1, 4, 9, 12, 14, 25, 64, 81]
-print(square[2:6])
-print(square[:5])
-print(square[3:])
+# def print_text():
+#     print("Hello world!")
+#
+# decorated = decor(print_text)
+# decorated()
+#
+#
+# def decor(func):
+#     def wrap():
+#         print("============")
+#         func()
+#         print("============")
+#     return wrap
+#
+#
+# @decor
+# def print_text():
+#     print("Hello world!")
+#
+# print_text();
 
-list = ["a", "b", "c", "d"]
-a = list[0:2]
-print(a)
+def factorial(x):
+    if x == 1:
+        return 1
+    else:
+        return x * factorial(x-1)
+print(factorial(5))
 
-sqs = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-print(sqs[1::4])
+def is_even(x):
+    if x == 0:
+        return True
+    else:
+        return is_odd(x-1)
 
-squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-print(squares[1:-1])
-print(squares[::-1])
+def is_odd(x):
+    return not is_even(x)
 
-# list comprehension
-cubes = [i**3 for i in range(10)]
-print(cubes)
 
-evens=[i**2 for i in range(10) if i**2 % 2 == 0]
-print(evens)
-
-a = [i for i in range(20) if i % 3 == 0]
-print(a)
+print(is_odd(17))
+print(is_even(23))
