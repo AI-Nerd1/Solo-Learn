@@ -221,3 +221,103 @@ window.addEventListener("load",function() {
     //initial kick
     step();
   });
+
+
+
+
+  function main() {
+    var distance = parseInt(readLine(), 10);
+    //your code goes here
+     const speed = 40; 
+     const time = distance/speed; 
+     const timeInMinutes= time*60;
+     console.log(timeInMinutes );
+     
+     }
+
+     function main() {
+        var depth = parseInt(readLine(), 10);
+        //your code goes here
+       
+        i = 0;
+       
+        for (; depth > 0;) {
+            i++;
+           
+            depth -= 7
+            if (depth > 0) {
+                depth += 2
+            }
+        }
+        console.log(i);
+    }
+
+
+    function main() {
+        var amount = parseFloat(readLine(), 10);
+        var rate = parseFloat(readLine(), 10);
+        
+        console.log(convert(amount, rate));
+        }
+    function convert(amount,rate){
+        return amount * rate 
+    }
+
+
+
+    function contact(name, number) 
+    {
+        this.name = name;
+        this.number = number;
+        this.print = print;
+    }
+    
+    function print()
+    {
+        console.log(this.name + ": " + this.number);
+    }
+    
+    var a = new contact("David", 12345);
+    var b = new contact("Amy", 987654321)
+    a.print();
+    b.print();
+
+
+function main() {
+    var increase = parseInt(readLine(), 10);
+    var prices = [98.99, 15.2, 20, 1026];
+    //your code goes here
+    for(var i=0;i<=prices.length-1;i++){
+        prices[i]=prices[i]+increase;
+    }
+    console.log(prices);
+}
+
+
+class Add {
+    constructor(...words) {
+        this.words = words;
+    }
+    //your code goes here
+    print(){
+        var y ="";
+        for (x of this.words) {
+          if(x == ","){
+            x = "";
+          }
+          else{
+            y += "$" + x;
+          }
+        }
+  
+        y = y + "$";
+        console.log(y);
+    }
+  }
+  
+  var x = new Add("hehe", "hoho", "haha", "hihi", "huhu");
+  var y = new Add("this", "is", "awesome");
+  var z = new Add("lorem", "ipsum", "dolor", "sit", "amet", ",", "consectetur", "adipiscing", "elit");
+  x.print();
+  y.print();
+  z.print();
