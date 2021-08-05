@@ -1,0 +1,132 @@
+div{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: green;
+    color: white;
+}
+body {
+    background:url("http://www.sololearn.com/images/bg2.jpg");
+}
+nav {
+    padding: 50px 0;
+    min-width: 500px; 
+}
+nav ul {
+    background: linear-gradient(90deg, 
+     rgba(255, 255, 255, 0) 0%, 
+     rgba(255, 255, 255, 0.2) 25%, 
+     rgba(255, 255, 255, 0.2) 75%, 
+     rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+     inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    padding: 10px; 
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: Arial;
+    text-decoration: none;
+    display: block;
+ }
+
+ div {
+    float: left;
+    width: 300px; 
+    height: 100px;
+    margin: 4px;
+    color: #FFF;  
+    background: linear-gradient(DeepSkyBlue, Black);
+}
+
+div.first {
+    float: left;
+    width: 300px; 
+    height: 100px;
+    margin: 4px;
+    color: #FFF;  
+    background:-webkit-linear-gradient(left, blue, green, white);
+    background:-moz-linear-gradient(left, blue, green, white);
+    background:-ms-linear-gradient(left, blue, green, white);
+} 
+div.second { 
+    float: left;
+    width: 300px; 
+    height: 100px;
+    margin: 4px;
+    background:-webkit-linear-gradient(bottom, blue, green, white);
+    background:-moz-linear-gradient(bottom, blue, green, white);
+    background:-ms-linear-gradient(bottom, blue, green, white);
+}
+
+div.first {
+    height: 150px;
+    width: 200px;
+    color: #FFF;
+    background: -moz-radial-gradient(green, yellow, blue);   
+    background: -webkit-radial-gradient(green, yellow, blue);
+    background: -ms-radial-gradient(green, yellow, blue);
+}
+div.second {
+    height: 150px;
+    width: 200px;
+    color: #FFF;
+    background: -moz-radial-gradient(circle, green, yellow, blue); 
+    background: -webkit-radial-gradient(circle, green, yellow, blue); 
+    background: -ms-radial-gradient(circle, green, yellow, blue); 
+}
+
+div.empty-div {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+div.green-div {
+    padding: 50px;
+    position: absolute;
+    background-color: #8bc34a;
+    border: 1px solid white;
+    transform: rotate(15deg);
+    transform-origin: 25% 75%;
+    -webkit-transform: rotate(15deg);
+    -webkit-transform-origin: 25% 75%;
+}
+
+@keyframes example {
+    0%  {background-color: red;}
+    50%  {background-color: yellow;}
+    70%  {background-color: blue;}
+    100% {background-color: green;}
+ }
+
+ div {
+    animation-name: colorchange;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    height:100px;
+    width:0px;
+    background-color:red;
+    -webkit-animation-name: colorchange;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: reverse;
+}
+@keyframes colorchange {
+    from { width: 0px; }
+    to { width: 100px; }
+}
+@-webkit-keyframes colorchange {
+    from { width: 0px; }
+    to { width: 100px; }
+}
