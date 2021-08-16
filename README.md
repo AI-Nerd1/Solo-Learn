@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-All documentations for all programming languages learnt using solo learn
+All documentations for all programming languages learnt using solo learn.
 </p>
 
 
